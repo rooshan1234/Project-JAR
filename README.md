@@ -56,3 +56,15 @@ The project dependences are split into the application server (which in this cas
 * appcompat >= v7:23.1.1
 * jdk >= 1.8.0_66
 * Compile-SDK-Version = Andriod 6.0 (Marshmallow)  - Android 4.0.3 (Icecream Sandwich)
+
+## Help
+#### GCM related issues with generating the google-services.json:
+https://developers.google.com/cloud-messaging/android/client
+
+#### Transmission related issues with modifying settings.json file:
+https://help.ubuntu.com/community/TransmissionHowTo
+
+https://trac.transmissionbt.com/wiki/ConfigurationParameters
+
+#### XMPP application server issues:
+http://www.androiddocs.com/google/gcm/ccs.html
