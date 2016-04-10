@@ -38,7 +38,7 @@ This repository will contain the required procedures and code to setup a torrent
 4. Once copied correctly, hit the send button and the python script should pick up the torrent and put it on download.
 
 ## Project Dependences
-The project dependences are split into the server application (which in this case is the raspberry pi running the torrent box) and client application (the android application that will send the torrent magnet links to the raspberry pi).
+The project dependences are split into the application server (which in this case is the raspberry pi running the torrent box) and client application (the android application that will send the torrent magnet links to the raspberry pi).
 
 #### Application server:
 
