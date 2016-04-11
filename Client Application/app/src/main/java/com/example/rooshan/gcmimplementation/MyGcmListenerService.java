@@ -1,6 +1,5 @@
 package com.example.rooshan.gcmimplementation;
 
-import android.app.Activity;
 import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
@@ -12,21 +11,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.media.RingtoneManager;
 import android.support.v4.app.NotificationCompat;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.view.View;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.util.Log;
-import android.content.Intent;
-import android.os.Bundle;
 import com.google.android.gms.gcm.GcmListenerService;
 
 /**
@@ -46,27 +30,20 @@ public class MyGcmListenerService extends GcmListenerService {
 
         String dataFromGCMSever = data.getString("message");
 
-        Log.d(CLASSTAG, "From: " + from);
+        //Log.d(CLASSTAG, "From: " + from);
 
         Log.d(CLASSTAG, "Message: " + dataFromGCMSever);
 
-
-        //Log.d(CLASSTAG,"Bundle Data: " + data.getBundle("notification").getString("body"));
-
-        //String notifcationDataFromGCMServer = data.getBundle("notification").getString("body");
-
-        //Log.d(CLASSTAG,"Bundle data: " + notifcationDataFromGCMServer);
-        //send a proper notification to device
-
+        //Send message to the main activity to have it display returned messages from the server application (raspberry pi)
         Intent  message_recieved= new Intent("MESSAGE_RECIEVED");
         message_recieved.putExtra("Message", dataFromGCMSever);
 
         LocalBroadcastManager.getInstance(this).sendBroadcast(message_recieved);
 
-        sendNoftifcation(dataFromGCMSever);
+        sendNotification(dataFromGCMSever);
     }
 
-    private void sendNoftifcation (String message){
+    private void sendNotification (String message){
 
         Log.d(CLASSTAG, "Show Notification!");
 
